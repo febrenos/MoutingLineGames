@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link href="./img/logo0.gif" rel="icon" type="image/x-icon">
+    <title>MLG</title>
+</head>
+<body>
+    <!-- animation alert -->
+    <!-- edit player similars -->
+    <form action="" class="loginF">
+        <div class="lHeader">
+            <img src="./img/logo.png" class="imgLogo">
+            <!-- <h1>Mouting Line Games</h1> -->
+        </div>
+        <div class="mainF">
+            <input type="text" placeholder="Nickname" class="input">
+            <button type="submit" class="submit" disabled>Player</button>
+        </div>
+        <div>
+            <div class="content">
+                <div>
+                    <div class="alingW">
+                        <div class="warning">
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button type="button" onclick="list()" disabled>players</button>
+                        <button type="button" onclick="findPlayer()" disabled>find player</button>
+                        <button type="button" onclick="findScore()" disabled>find score</button>
+                        <button type="button" onclick="edit()" disabled>edit</button>
+                        <button type="button" onclick="remove()" disabled>remove</button>
+                        <button type="button" onclick="clearL()" disabled>clear</button>
+                    </div>
+                    <div class="gameIn">
+                        <a href="triangle.html"><button class="gameB" type="button" disabled>Start</button></a>
+                    </div>
+                    <div class="players">
+                        <table class="playersL">
+                            <!-- new players -->
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script defer src="./js/login.js"></script><!--run after html(same to put js in final of body)-->
+</body>
+</html>
