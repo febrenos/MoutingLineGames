@@ -1,0 +1,151 @@
+body{
+    background-image: url("../img/bglogin.png");
+    /* https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap */
+    background-size: 660px;
+    background-repeat: repeat-x;
+    background-color: #011236;
+}
+.loginF{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;/*100% view port*/
+    justify-content: center;
+}
+.lHeader{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.lHeader img{
+    font-family: 'Pinyon Script', cursive;
+    color: #ffffff;/*use opacity here*/
+    animation: logo 3s infinite linear;
+}
+.input{
+    border: 2px solid #aaa;
+    border-radius: 8px;
+    font-size: 17px;
+    margin-bottom: 15px;
+    max-width: 300px;
+    outline: none;
+    padding: 15px;
+    width: 100%;
+}
+.submit{
+    background-color: #377cd2;
+    font-size: 17px;
+    max-width: 300px;
+    padding: 15px;
+    width: 100%;
+}
+.gameIn{
+    display: flex;
+    justify-content: center;
+}
+.gameB{
+    background-color: #c80355;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+}
+button{
+    transition: .3s;
+}
+button:disabled{
+    background-color: #eeeeee3b;
+    color: #aaa;
+    cursor: auto;
+}
+
+.mainF{
+    display: flex;
+    justify-content: center;
+}
+.mainF input, .mainF button{
+    /* max-width: 230px; */
+    margin: 5px;
+}
+.mainF input, .mainF input::placeholder{
+    color: #aaa;
+    background-color: #00000000;
+}
+.alingW{
+    justify-content: center; 
+    display: flex;
+}
+.warningStyle{
+    box-shadow: 0 0 1em #0c71ef;
+    animation: warning 1.3s ease-out;
+    border: 1px solid  #377cd2;
+    /* background-color: #333; */
+    color:#aaa;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.warning{
+    transition: .2s;
+}
+.warning p{
+    white-space: nowrap;
+    text-align: center;
+    margin: 5px;
+}
+@keyframes warning{
+    0%{
+        width: 0%;
+        height: 0%;
+        color:transparent;
+    }
+    10%{
+        width: 0%;
+        height: 0%;
+        color:transparent;
+    }
+    40%{
+        width: 100%;
+        color:transparent;
+    }
+}
+.content{
+    width: 0;
+    position: absolute;
+    justify-content: center;
+    display: flex;
+    /* margin-top: 20px; */
+}
+.players{
+    display: flex; 
+    justify-content: center;
+}
+.playersL{
+    width: 250px;
+}
+
+body::-webkit-scrollbar {
+    width: 19px;/* width of the entire scrollbar */
+  }
+
+/* body::-webkit-scrollbar-track {
+    background: #c80355;
+} */
+
+body::-webkit-scrollbar-thumb {
+    background-color: #c80355;  /* color of the scroll thumb */
+    border-radius: 20px;          /* roundness of the scroll thumb */
+    border: 4px solid #011236;  /* creates padding around scroll thumb */
+}
+@keyframes logo {
+    0%{
+        opacity: .7;
+    }
+    50%{
+        opacity: .2;
+    }
+    100%{
+        opacity: .7;
+    }
+}

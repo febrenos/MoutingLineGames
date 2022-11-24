@@ -1,0 +1,33 @@
+html{
+    font-family: monospace,system-ui;
+}
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: none;
+    box-sizing: border-box;
+}
+p,table{
+    font-size: 19px;
+}
+th,td{
+    padding: 3px;
+    color: #fff;
+}
+th{
+    border-radius: 5px 0 5px 0;
+}
+tr:nth-child(2n+1){    
+    background-color: rgba(238, 238, 238, 0.233);
+}
+button{
+    white-space: nowrap;
+    margin: 0 0 5px 5px;
+    background-color: #377cd2;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px;
+}

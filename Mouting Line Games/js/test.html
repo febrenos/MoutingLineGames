@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Test click</button>
+</body>
+<script>
+    // let fP = filterP();
+    // let fS = filterS();
+    // let edit = null;
+    
+    // if(fP.length === 1){
+    //     edit = fP[0].nickName;
+    //     findPlayer();
+    // }else if(fS.length === 1){
+    //     edit = fS[0].nickName;
+    //     findScore();
+    // }
+    var click = 0;
+    document.querySelector("button").onclick = () => {
+        if (click === 0) {
+            alert("click 1");
+            click += 1;
+        }else if(click === 1) {
+            alert("click 2");
+            click = 0;
+        }
+    }
+</script>
+</html>
+<!-- var click = 0;
+const f = filterP();
+const edit = input.value;
+getButton(3).onclick = () => {
+    if (click == 0) {
+        input.value = "";
+        validateI();
+        setTimeout(() => {
+            getButton(3).removeAttribute("disabled");
+          }, "400")
+        click += 1;
+    } else if (click == 1) {
+        playersStorage = JSON.parse(localStorage.getItem("players"));
+        for (const p of playersStorage) {
+            if (p.nickName === edit) {
+                p.nickName = input.value;
+                break;
+            }
+        }
+        click = 0;
+        localStorage.setItem("players", JSON.stringify(playersStorage));
+        makePList();
+    }
+}
+console.log("'" + edit + "' " + "EDITED"); -->

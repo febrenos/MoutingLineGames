@@ -1,0 +1,27 @@
+reset.css
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+/* GOOGLE FONTS
+Monoton
+Bungee
+Creepster
+Mr Dafoe
+Qwitcher Grypen
+*/
+/* @import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap'); */
+
+
+login.css
+/* .loginF h1{
+    position: relative;
+} */
+/* .imgLogo{
+    margin-top: -200px;
+    width: 150px;
+    border-radius: 5%;
+    opacity: .4;
+    border: #333;
+    position: absolute;
+    animation: brainY 2s infinite linear;
+} */
