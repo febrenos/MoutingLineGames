@@ -33,10 +33,11 @@ let validateI = () => {//obj destructer "input.value.event.target.value"
     filterS();
     filterP();
     let resultL = document.querySelectorAll("tr").length -1;
-    ((filtedP.length !== 0) ? founded = filtedP[0].nickName : founded = null);
-    const validI = /[=]|\s|\d/.test(input.value) && founded;// true / false(null)
+    founded = playersStorage.filter(p => p.nickName === input.value);
+    ((founded.length === 0) ? founded = false : founded = true);
+    let validI = /[=]|\s|\d/.test(input.value) || founded;// true / false(null)
 
-    if (input.value.length > 1 && input.value.length < 20 && input.value !== founded && validI === false) {//!includesN
+    if (input.value.length > 1 && input.value.length < 20 && !founded && !validI) {//!includesN
         submit.disabled = false;//enable
         warning.classList.remove("warningStyle")
         warningP.innerHTML = "";
@@ -62,14 +63,15 @@ let validateI = () => {//obj destructer "input.value.event.target.value"
     } else {
         getButton(3).disabled = true;
     }
+    //subimit true and click=1 and enontrado input
     if( !submit.disabled && clickInEdit === 1 && input.value !== founded){ //filtedP.length === 0 && playersStorage.some(i => i.nickName === firstI)
-        getButton(4).disabled = false;
+        getButton(4).disabled = false;//habilita bnt
     }else if(clickInEdit === 0 && input.value === founded){
         getButton(4).disabled = false;
     }else{
-        getButton(4).disabled = true;
+        getButton(4).disabled = true;//desabilita
     }
-    if (filtedP.length !== 0 || filtedS.length !== 0 || founded !== null) {
+    if (filtedP.length !== 0 || filtedS.length !== 0 || founded) {
         getButton(5).disabled = false;
     } else {
         getButton(5).disabled = true;
@@ -91,8 +93,8 @@ const subimit = (event) => {
     filterS();
     filterP();
     ((filtedP.length !== 0) ? founded = filtedP[0].nickName : founded = null);
-    const validI = /[=]|\s|\d/.test(input.value) && founded;
-    if(input.value.length > 1 && input.value.length < 20 && input.value !== founded && validI === false){
+    let validI = /^([=]|\s|\d)/.test(input.value) || founded;
+    if(input.value.length > 1 && input.value.length < 20 && input.value !== founded && !validI){
         filtedP.length = 0;
         filtedS.length = 0;
         playersStorage.push({ rank: 0, nickName: input.value, score: 5});
@@ -267,10 +269,10 @@ function makePList() {
     document.querySelector("table").innerHTML = "";//reset
     function title(){
         return `<tr>
-            <th>${"Rank"}</th>
-            <th>${"Players"}</th>
-            <th>${"Scors"}</th>
-        </tr>`;
+                    <th>${"Rank"}</th>
+                    <th>${"Players"}</th>
+                    <th>${"Scors"}</th>
+                </tr>`;
     }
     var generateL = playerList.map(function(item, index){
         return `<tr>
