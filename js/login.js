@@ -64,9 +64,9 @@ let validateI = () => {//obj destructer "input.value.event.target.value"
         getButton(3).disabled = true;
     }
     //subimit true and click=1 and enontrado input
-    if( !submit.disabled && clickInEdit === 1 && input.value !== founded){ //filtedP.length === 0 && playersStorage.some(i => i.nickName === firstI)
+    if( !submit.disabled && clickInEdit === 1 && !founded){ //filtedP.length === 0 && playersStorage.some(i => i.nickName === firstI)
         getButton(4).disabled = false;//habilita bnt
-    }else if(clickInEdit === 0 && input.value === founded){
+    }else if(clickInEdit === 0 && founded){
         getButton(4).disabled = false;
     }else{
         getButton(4).disabled = true;//desabilita
