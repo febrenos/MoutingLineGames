@@ -93,8 +93,8 @@ const subimit = (event) => {
     filterS();
     filterP();
     ((filtedP.length !== 0) ? founded = filtedP[0].nickName : founded = null);
-    let validI = /^([=]|\s|\d)/.test(input.value) || founded;
-    if(input.value.length > 1 && input.value.length < 20 && input.value !== founded && !validI){
+    // let validI = /^([=]|\s|\d)/.test(input.value) || founded;
+    if(input.value.length > 1 && input.value.length < 20){//&& input.value !== founded && !validI
         filtedP.length = 0;
         filtedS.length = 0;
         playersStorage.push({ rank: 0, nickName: input.value, score: 5});
